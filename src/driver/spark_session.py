@@ -8,8 +8,6 @@ def create_spark_session(app_name):
         .config("spark.driver.maxResultSize", "21g") \
         .config("spark.akka.frameSize", "2011") \
         .config("spark.yarn.executor.memoryOverhead", 2048) \
-        .config("spark.eventLog.enabled", "true") \
-        .config("spark.eventLog.dir", "resources/logs") \
         .getOrCreate()
     
     return spark
